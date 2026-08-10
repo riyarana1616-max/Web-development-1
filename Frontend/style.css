@@ -157,186 +157,606 @@ h3{
 }
 
 
-/* ==============================
+/* =====================================================
    RESPONSIVE DESIGN
-   ============================== */
-
-/* Tablet */
-@media (max-width: 900px) {
-
-    .start {
-        padding-left: 25px;
-        padding-bottom: 80px;
-        font-size: 18px;
-    }
-
-    .container {
-        width: 80%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto 40px auto;
-        padding: 25px;
-    }
-
-    input:not([type="checkbox"]) {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px 15px;
-    }
-
-    .login button,
-    .google button {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px;
-    }
-
-    .options label {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .options a {
-        margin-left: auto;
-    }
-}
+   ===================================================== */
 
 
-/* Mobile */
-@media (max-width: 600px) {
+/* =========================
+   TABLET
+   601px - 900px
+   ========================= */
+
+@media screen and (max-width: 900px) {
 
     body {
+        width: 100%;
         min-height: 100vh;
-        background-position: center;
-        background-size: cover;
         overflow-x: hidden;
     }
 
+    /* Main layout */
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Hero section */
     .start {
-        padding: 30px 20px 40px 20px;
-        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 40px 40px 30px 40px;
+
         text-align: left;
     }
 
     .start h1 {
-        font-size: 32px;
+        font-size: 42px;
         line-height: 1.15;
-        margin-bottom: 20px;
+        margin: 0 0 20px 0;
     }
 
     .start span {
-        font-size: 15px;
+        font-size: 17px;
         line-height: 1.4;
     }
 
+    /* Login box */
     .container {
-        width: calc(100% - 40px);
-        max-width: none;
+        width: min(450px, calc(100% - 80px));
         height: auto;
-        margin: 0 20px 30px 20px;
-        padding: 20px;
+
         box-sizing: border-box;
-        border-radius: 15px;
+
+        margin: 20px auto 50px auto;
+        padding: 30px;
+
+        text-align: center;
     }
 
-    .intro h1 {
-        font-size: 23px;
-    }
-
-    .intro span {
-        font-size: 13px;
-    }
-
-    .layout p,
-    .content p {
-        font-size: 15px;
-    }
-
+    /* Inputs */
     input:not([type="checkbox"]) {
         width: 100%;
         box-sizing: border-box;
+
         padding: 12px 15px;
     }
 
+    /* Buttons */
+    .login button,
+    .google button {
+        width: 100%;
+        box-sizing: border-box;
+
+        justify-content: center;
+    }
+
+    .login button {
+        padding: 12px;
+    }
+
+    .google button {
+        padding: 11px;
+    }
+
+    /* Remember + forgot */
     .options label {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        font-size: 13px;
         gap: 5px;
     }
 
     .options a {
         margin-left: auto;
-        font-size: 13px;
     }
 
-    .login button {
-        width: 100%;
-        padding: 12px;
-        margin-top: 20px;
-        box-sizing: border-box;
-    }
-
-    .login p {
-        font-size: 13px;
-        padding-right: 0;
-    }
-
-    .google button {
-        width: 100%;
-        padding: 11px;
-        box-sizing: border-box;
-    }
-
-    .google p {
-        font-size: 13px;
-        padding-right: 0;
-    }
-
-    .google img {
-        width: 20px;
-    }
-
-    /* Hide robot on very small screens if it is present */
+    /* Robot */
     .robot {
-        width: 280px;
-        max-width: 70%;
-        left: 50%;
-        top: 35%;
-        opacity: 0.35;
-        z-index: -1;
+        width: 400px;
+        max-width: 45vw;
     }
 }
 
 
-/* Very small phones */
-@media (max-width: 400px) {
+/* =========================
+   MOBILE
+   600px AND BELOW
+   ========================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Prevent horizontal scrolling */
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       MAIN HEADER / WRAPPER
+       ========================= */
+
+    .header {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+        justify-content: flex-start;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       HERO / LEFT SIDE
+       ========================= */
 
     .start {
-        padding: 25px 15px 30px 15px;
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 30px 20px 25px 20px;
+
+        margin: 0;
+
+        text-align: left;
     }
 
     .start h1 {
-        font-size: 28px;
+        font-size: 34px;
+
+        line-height: 1.12;
+
+        margin: 0 0 18px 0;
     }
+
+    .start span {
+        display: block;
+
+        font-size: 15px;
+
+        line-height: 1.45;
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       LOGIN CONTAINER
+       ========================= */
 
     .container {
-        width: calc(100% - 30px);
-        margin: 0 15px 25px 15px;
-        padding: 18px;
+        display: block;
+
+        width: calc(100% - 40px);
+
+        max-width: 420px;
+
+        height: auto;
+
+        box-sizing: border-box;
+
+        margin: 15px auto 40px auto;
+
+        padding: 22px 20px 25px 20px;
+
+        border: 2px solid white;
+
+        border-radius: 15px;
+
+        text-align: center;
     }
 
+
+    /* =========================
+       WELCOME TEXT
+       ========================= */
+
     .intro h1 {
-        font-size: 21px;
+        width: 100%;
+
+        font-size: 24px;
+
+        line-height: 1.2;
+
+        margin: 8px 0 10px 0;
+
+        text-align: left;
+    }
+
+    .intro span {
+        display: block;
+
+        width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+       EMAIL
+       ========================= */
+
+    .layout {
+        width: 100%;
+    }
+
+    .layout p {
+        width: 100%;
+
+        margin: 20px 0 8px 0;
+
+        padding: 0;
+
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       PASSWORD
+       ========================= */
+
+    .content {
+        width: 100%;
+    }
+
+    .content p {
+        width: 100%;
+
+        margin: 18px 0 8px 0;
+
+        padding: 0;
+
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       ALL TEXT INPUTS
+       ========================= */
+
+    input:not([type="checkbox"]) {
+        display: block;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        padding: 10px 14px;
+
+        margin: 0;
+
+        border: 2px solid black;
+
+        border-radius: 5px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       REMEMBER / FORGOT
+       ========================= */
+
+    .options {
+        width: 100%;
+
+        margin-top: 10px;
     }
 
     .options label {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        align-items: center;
+
+        flex-wrap: nowrap;
+
+        gap: 5px;
+
+        margin: 0;
+
         font-size: 12px;
     }
 
+    .options input[type="checkbox"] {
+        flex-shrink: 0;
+
+        width: auto;
+        margin: 0;
+    }
+
     .options a {
+        margin-left: auto;
+
+        margin-top: 0;
+
+        white-space: nowrap;
+
         font-size: 12px;
+    }
+
+
+    /* =========================
+       LOGIN BUTTON
+       ========================= */
+
+    .login {
+        width: 100%;
+    }
+
+    .login button {
+        display: flex;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        margin-top: 20px;
+
+        padding: 10px;
+
+        justify-content: center;
+        align-items: center;
+
+        border: 2px solid black;
+
+        border-radius: 7px;
+
+        background-color: rgb(135, 7, 255);
+
+        color: aliceblue;
+
+        font-size: 14px;
+
+        cursor: pointer;
+    }
+
+
+    /* =========================
+       OR CONTINUE
+       ========================= */
+
+    .login p {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 15px 0;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       GOOGLE BUTTON
+       ========================= */
+
+    .google {
+        width: 100%;
+    }
+
+    .google button {
+        display: flex;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        padding: 8px 12px;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 7px;
+
+        border: 2px solid black;
+
+        border-radius: 7px;
+
+        font-size: 13px;
+
+        cursor: pointer;
+    }
+
+    .google img {
+        width: 20px;
+        height: 20px;
+
+        object-fit: contain;
+    }
+
+    .google p {
+        width: 100%;
+
+        margin: 15px 0 0 0;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       ROBOT
+       ========================= */
+
+    .robot {
+        display: none;
+    }
+
+
+    /* =========================
+       OTHER ELEMENTS
+       ========================= */
+
+    .top {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        box-sizing: border-box;
+    }
+
+    h3 {
+        font-size: 24px;
+
+        margin-left: 0;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+   400px AND BELOW
+   ========================= */
+
+@media screen and (max-width: 400px) {
+
+    .start {
+        padding: 25px 16px 20px 16px;
+    }
+
+    .start h1 {
+        font-size: 30px;
+    }
+
+    .start span {
+        font-size: 14px;
+    }
+
+
+    .container {
+        width: calc(100% - 30px);
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 20px 17px 23px 17px;
+    }
+
+
+    .intro h1 {
+        font-size: 22px;
+    }
+
+    .intro span {
+        font-size: 12px;
+    }
+
+
+    input:not([type="checkbox"]) {
+        height: 42px;
+
+        font-size: 13px;
+    }
+
+
+    .options label {
+        font-size: 11px;
+    }
+
+    .options a {
+        font-size: 11px;
+    }
+
+
+    .login button,
+    .google button {
+        height: 42px;
+    }
+
+
+    .login p {
+        font-size: 10px;
+    }
+
+    .google p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   360px AND BELOW
+   ========================= */
+
+@media screen and (max-width: 360px) {
+
+    .start h1 {
+        font-size: 27px;
+    }
+
+    .start span {
+        font-size: 13px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    .options label {
+        font-size: 10px;
+    }
+
+    .options a {
+        font-size: 10px;
     }
 }
