@@ -155,3 +155,188 @@ h3{
    margin-left: 18px;
    
 }
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .start {
+        padding-left: 25px;
+        padding-bottom: 80px;
+        font-size: 18px;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto 40px auto;
+        padding: 25px;
+    }
+
+    input:not([type="checkbox"]) {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 15px;
+    }
+
+    .login button,
+    .google button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .options label {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .options a {
+        margin-left: auto;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .start {
+        padding: 30px 20px 40px 20px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .start h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .start span {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+        max-width: none;
+        height: auto;
+        margin: 0 20px 30px 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    .intro h1 {
+        font-size: 23px;
+    }
+
+    .intro span {
+        font-size: 13px;
+    }
+
+    .layout p,
+    .content p {
+        font-size: 15px;
+    }
+
+    input:not([type="checkbox"]) {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 15px;
+    }
+
+    .options label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        font-size: 13px;
+        gap: 5px;
+    }
+
+    .options a {
+        margin-left: auto;
+        font-size: 13px;
+    }
+
+    .login button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .login p {
+        font-size: 13px;
+        padding-right: 0;
+    }
+
+    .google button {
+        width: 100%;
+        padding: 11px;
+        box-sizing: border-box;
+    }
+
+    .google p {
+        font-size: 13px;
+        padding-right: 0;
+    }
+
+    .google img {
+        width: 20px;
+    }
+
+    /* Hide robot on very small screens if it is present */
+    .robot {
+        width: 280px;
+        max-width: 70%;
+        left: 50%;
+        top: 35%;
+        opacity: 0.35;
+        z-index: -1;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+    .start {
+        padding: 25px 15px 30px 15px;
+    }
+
+    .start h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+        margin: 0 15px 25px 15px;
+        padding: 18px;
+    }
+
+    .intro h1 {
+        font-size: 21px;
+    }
+
+    .options label {
+        font-size: 12px;
+    }
+
+    .options a {
+        font-size: 12px;
+    }
+}
