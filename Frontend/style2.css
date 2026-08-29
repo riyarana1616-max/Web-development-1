@@ -1,0 +1,1250 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-image: url("background.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #02021b;
+
+    margin: 0;
+    padding: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ROBOT
+   ========================================= */
+
+.robot {
+    position: absolute;
+
+    width: 650px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   MAIN HEADER
+   ========================================= */
+
+.header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-right: 90px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   LEFT SIDE
+   ========================================= */
+
+.start {
+    padding-bottom: 270px;
+
+    padding-left: 40px;
+
+    font-family: sans-serif;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+.start h1 {
+    margin-bottom: 20px;
+
+    line-height: 1.15;
+}
+
+
+.start span {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-weight: normal;
+}
+
+
+/* =========================================
+   LOGIN CONTAINER
+   ========================================= */
+
+.container {
+    display: block;
+
+    width: 320px;
+
+    min-height: 470px;
+
+    border: 2px solid white;
+
+    padding: 30px;
+
+    padding-top: 5px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro h1 {
+    text-align: left;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-family: sans-serif;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.intro span {
+    display: block;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   EMAIL SECTION
+   ========================================= */
+
+.layout {
+    width: 100%;
+}
+
+
+.layout p {
+    text-align: left;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   PASSWORD SECTION
+   ========================================= */
+
+.content {
+    width: 100%;
+}
+
+
+.content p {
+    text-align: left;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   EMAIL + PASSWORD INPUTS
+   ========================================= */
+
+input:not([type="checkbox"]) {
+    display: block;
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 10px 14px;
+
+    border: 2px solid black;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+
+input:not([type="checkbox"]):focus {
+    border-color: rgb(135, 7, 255);
+}
+
+
+/* =========================================
+   REMEMBER ME + FORGOT PASSWORD
+   ========================================= */
+
+.options {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    min-height: 25px;
+}
+
+
+/* Remember Me label */
+
+.options label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+/* ACTUAL CHECKBOX */
+
+.options input[type="checkbox"] {
+    appearance: auto;
+
+    -webkit-appearance: checkbox;
+
+    display: inline-block;
+
+    width: 16px;
+
+    height: 16px;
+
+    margin: 0;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    accent-color: rgb(135, 7, 255);
+
+    flex-shrink: 0;
+}
+
+
+/* Forgot Password */
+
+.options a {
+    margin-left: auto;
+
+    margin-top: 0;
+
+    color: rgb(135, 7, 255);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+   ========================================= */
+
+#errorMessage {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #ff4d7d;
+}
+
+
+/* =========================================
+   LOGIN SECTION
+   ========================================= */
+
+.login {
+    width: 100%;
+}
+
+
+.login button {
+    display: flex;
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    border: 2px solid black;
+
+    border-radius: 7px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    background-color: rgb(135, 7, 255);
+
+    color: aliceblue;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.login button:hover {
+    opacity: 0.85;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   OR CONTINUE
+   ========================================= */
+
+.login p {
+    width: 100%;
+
+    margin: 15px 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   GOOGLE SECTION
+   ========================================= */
+
+.google {
+    width: 100%;
+}
+
+
+.google button {
+    display: flex;
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 8px 12px;
+
+    border: 2px solid black;
+
+    border-radius: 7px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    background-color: white;
+
+    color: black;
+
+    transition: 0.3s;
+}
+
+
+.google button:hover {
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+
+/* Google image */
+
+.google img {
+    width: 20px;
+
+    height: 20px;
+
+    object-fit: contain;
+}
+
+
+/* Sign up text */
+
+.google p {
+    width: 100%;
+
+    margin: 15px 0 0 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* Sign Up link */
+
+#signup {
+    color: rgb(135, 7, 255);
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+#signup:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   GENERAL IMAGES
+   ========================================= */
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+h3 {
+    font-size: 30px;
+
+    margin-left: 18px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   BOTTOM FEATURE SECTION
+   ========================================= */
+
+.top {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    gap: 20px;
+
+    position: relative;
+
+    z-index: 3;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   BOTTOM FEATURE CARDS
+   ========================================= */
+
+.feed,
+.smart,
+.track {
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+
+.feed:hover,
+.smart:hover,
+.track:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   TABLET
+   601px - 900px
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    body {
+        width: 100%;
+
+        min-height: 100vh;
+
+        overflow-x: hidden;
+    }
+
+
+    /* Main layout */
+
+    .header {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    /* Hero */
+
+    .start {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 40px 40px 30px 40px;
+
+        text-align: left;
+    }
+
+
+    .start h1 {
+        font-size: 42px;
+
+        line-height: 1.15;
+
+        margin: 0 0 20px 0;
+    }
+
+
+    .start span {
+        font-size: 17px;
+
+        line-height: 1.4;
+    }
+
+
+    /* Login box */
+
+    .container {
+        width: min(450px, calc(100% - 80px));
+
+        height: auto;
+
+        box-sizing: border-box;
+
+        margin: 20px auto 50px auto;
+
+        padding: 30px;
+
+        text-align: center;
+    }
+
+
+    /* Inputs */
+
+    input:not([type="checkbox"]) {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 12px 15px;
+    }
+
+
+    /* Buttons */
+
+    .login button,
+    .google button {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        justify-content: center;
+    }
+
+
+    .login button {
+        padding: 12px;
+    }
+
+
+    .google button {
+        padding: 11px;
+    }
+
+
+    /* Remember + Forgot */
+
+    .options {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+
+    .options label {
+        width: auto;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 5px;
+    }
+
+
+    .options a {
+        margin-left: auto;
+    }
+
+
+    /* Robot */
+
+    .robot {
+        width: 400px;
+
+        max-width: 45vw;
+    }
+
+
+    /* Bottom */
+
+    .top {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   600px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow-x: hidden;
+    }
+
+
+    /* Main header */
+
+    .header {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Hero */
+
+    .start {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 30px 20px 25px 20px;
+
+        margin: 0;
+
+        text-align: left;
+    }
+
+
+    .start h1 {
+        font-size: 34px;
+
+        line-height: 1.12;
+
+        margin: 0 0 18px 0;
+    }
+
+
+    .start span {
+        display: block;
+
+        font-size: 15px;
+
+        line-height: 1.45;
+
+        margin: 0;
+    }
+
+
+    /* Login container */
+
+    .container {
+        display: block;
+
+        width: calc(100% - 40px);
+
+        max-width: 420px;
+
+        height: auto;
+
+        box-sizing: border-box;
+
+        margin: 15px auto 40px auto;
+
+        padding: 22px 20px 25px 20px;
+
+        border: 2px solid white;
+
+        border-radius: 15px;
+
+        text-align: center;
+    }
+
+
+    /* Welcome */
+
+    .intro h1 {
+        width: 100%;
+
+        font-size: 24px;
+
+        line-height: 1.2;
+
+        margin: 8px 0 10px 0;
+
+        text-align: left;
+    }
+
+
+    .intro span {
+        display: block;
+
+        width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+
+        text-align: left;
+    }
+
+
+    /* Email */
+
+    .layout {
+        width: 100%;
+    }
+
+
+    .layout p {
+        width: 100%;
+
+        margin: 20px 0 8px 0;
+
+        padding: 0;
+
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* Password */
+
+    .content {
+        width: 100%;
+    }
+
+
+    .content p {
+        width: 100%;
+
+        margin: 18px 0 8px 0;
+
+        padding: 0;
+
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* Text inputs */
+
+    input:not([type="checkbox"]) {
+        display: block;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        padding: 10px 14px;
+
+        margin: 0;
+
+        border: 2px solid black;
+
+        border-radius: 5px;
+
+        font-size: 14px;
+    }
+
+
+    /* Remember / Forgot */
+
+    .options {
+        width: 100%;
+
+        margin-top: 10px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+
+    .options label {
+        width: auto;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        align-items: center;
+
+        flex-wrap: nowrap;
+
+        gap: 5px;
+
+        margin: 0;
+
+        font-size: 12px;
+
+        cursor: pointer;
+    }
+
+
+    .options input[type="checkbox"] {
+        flex-shrink: 0;
+
+        width: 16px;
+
+        height: 16px;
+
+        margin: 0;
+
+        padding: 0;
+
+        cursor: pointer;
+
+        accent-color: rgb(135, 7, 255);
+    }
+
+
+    .options a {
+        margin-left: auto;
+
+        margin-top: 0;
+
+        white-space: nowrap;
+
+        font-size: 12px;
+    }
+
+
+    /* Login */
+
+    .login {
+        width: 100%;
+    }
+
+
+    .login button {
+        display: flex;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        margin-top: 20px;
+
+        padding: 10px;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border: 2px solid black;
+
+        border-radius: 7px;
+
+        background-color: rgb(135, 7, 255);
+
+        color: aliceblue;
+
+        font-size: 14px;
+
+        cursor: pointer;
+    }
+
+
+    /* OR */
+
+    .login p {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 15px 0;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 11px;
+    }
+
+
+    /* Google */
+
+    .google {
+        width: 100%;
+    }
+
+
+    .google button {
+        display: flex;
+
+        width: 100%;
+
+        height: 44px;
+
+        box-sizing: border-box;
+
+        padding: 8px 12px;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 7px;
+
+        border: 2px solid black;
+
+        border-radius: 7px;
+
+        font-size: 13px;
+
+        cursor: pointer;
+    }
+
+
+    .google img {
+        width: 20px;
+
+        height: 20px;
+
+        object-fit: contain;
+    }
+
+
+    .google p {
+        width: 100%;
+
+        margin: 15px 0 0 0;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 12px;
+    }
+
+
+    /* Robot */
+
+    .robot {
+        display: none;
+    }
+
+
+    /* Bottom features */
+
+    .top {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Logo */
+
+    h3 {
+        font-size: 24px;
+
+        margin-left: 0;
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   400px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .start {
+        padding: 25px 16px 20px 16px;
+    }
+
+
+    .start h1 {
+        font-size: 30px;
+    }
+
+
+    .start span {
+        font-size: 14px;
+    }
+
+
+    .container {
+        width: calc(100% - 30px);
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        padding: 20px 17px 23px 17px;
+    }
+
+
+    .intro h1 {
+        font-size: 22px;
+    }
+
+
+    .intro span {
+        font-size: 12px;
+    }
+
+
+    input:not([type="checkbox"]) {
+        height: 42px;
+
+        font-size: 13px;
+    }
+
+
+    .options label {
+        font-size: 11px;
+    }
+
+
+    .options a {
+        font-size: 11px;
+    }
+
+
+    .login button,
+    .google button {
+        height: 42px;
+    }
+
+
+    .login p {
+        font-size: 10px;
+    }
+
+
+    .google p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   360px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .start h1 {
+        font-size: 27px;
+    }
+
+
+    .start span {
+        font-size: 13px;
+    }
+
+
+    .container {
+        width: calc(100% - 24px);
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .intro h1 {
+        font-size: 20px;
+    }
+
+
+    .options label {
+        font-size: 10px;
+    }
+
+
+    .options a {
+        font-size: 10px;
+    }
+
+}

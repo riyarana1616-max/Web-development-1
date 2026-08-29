@@ -85,6 +85,7 @@ input:not([type="checkbox"]) {
     border: 2px solid black;
     padding: 12px 100px 12px 15px;
     border-radius: 5px;
+   
 }
 
 .options label{
@@ -99,6 +100,8 @@ input:not([type="checkbox"]) {
 .options input[type="checkbox"] {
     margin: 0;
     padding: 0;
+
+   
    
 }
 .content p{
@@ -622,9 +625,9 @@ h3{
        ROBOT
        ========================= */
 
-    .robot {
-        display: none;
-    }
+     .robot {
+    display: none;
+}
 
 
     /* =========================
