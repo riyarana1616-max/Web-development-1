@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Analyzer - InterviewAI</title>
+
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <a href="dashboard.html" class="back-btn">
+                ← Back to Dashboard
+            </a>
+
+            <h1>Resume Analyzer</h1>
+
+            <p>
+                Check your resume's ATS score and suitability for a job.
+            </p>
+
+        </div>
+
+
+        <!-- Analyzer -->
+
+        <div class="analyzer-box">
+
+            <!-- Upload Resume -->
+
+            <div class="section">
+
+                <h2>📄 Upload Your Resume</h2>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        📁
+                    </div>
+
+                    <h3>Upload Resume</h3>
+
+                    <p>
+                        Supported formats: PDF and DOCX
+                    </p>
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        accept=".pdf,.docx"
+                    >
+
+                    <label
+                        for="resumeFile"
+                        class="upload-button">
+                        Choose Resume
+                    </label>
+
+                    <p id="fileName"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Job Position -->
+
+            <div class="section">
+
+                <h2>💼 Job Position</h2>
+
+                <input
+                    type="text"
+                    id="jobPosition"
+                    placeholder="Example: Frontend Developer"
+                >
+
+            </div>
+
+
+            <!-- Job Description -->
+
+            <div class="section">
+
+                <h2>📋 Job Description</h2>
+
+                <textarea
+                    id="jobDescription"
+                    placeholder="Paste the complete job description here..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Analyze -->
+
+            <button
+                id="analyzeBtn"
+                class="analyze-button">
+
+                Analyze Resume
+
+                <span>→</span>
+
+            </button>
+
+
+            <!-- Loading -->
+
+            <div id="loading" class="loading">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Reading your resume and analyzing it...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Results -->
+
+        <div
+            id="resultSection"
+            class="result-section">
+
+            <h2>📊 Resume Analysis Result</h2>
+
+
+            <!-- Score -->
+
+            <div class="score-card">
+
+                <div class="score-circle">
+
+                    <span id="atsScore">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="score-text">
+
+                    <h3>
+                        ATS Score
+                    </h3>
+
+                    <p id="matchResult">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Skills -->
+
+            <div class="result-grid">
+
+
+                <!-- Matching -->
+
+                <div class="result-card">
+
+                    <h3>
+                        ✅ Matching Skills
+                    </h3>
+
+                    <div
+                        id="matchingSkills"
+                        class="skills-container">
+                    </div>
+
+                </div>
+
+
+                <!-- Missing -->
+
+                <div class="result-card">
+
+                    <h3>
+                        ❌ Missing Skills
+                    </h3>
+
+                    <div
+                        id="missingSkills"
+                        class="skills-container">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Keyword Match -->
+
+            <div class="info-card">
+
+                <h3>
+                    🔍 Keyword Analysis
+                </h3>
+
+                <div class="keyword-info">
+
+                    <div>
+                        <strong id="totalKeywords">
+                            0
+                        </strong>
+
+                        <span>
+                            Required Keywords
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="matchedKeywords">
+                            0
+                        </strong>
+
+                        <span>
+                            Matched Keywords
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="keywordPercentage">
+                            0%
+                        </strong>
+
+                        <span>
+                            Keyword Match
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Improvements -->
+
+            <div class="improvement-card">
+
+                <h3>
+                    💡 Suggested Improvements
+                </h3>
+
+                <ul id="improvements">
+                </ul>
+
+            </div>
+
+
+            <!-- Resume Text -->
+
+            <details class="resume-text-box">
+
+                <summary>
+                    View Extracted Resume Text
+                </summary>
+
+                <div id="resumeText">
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- PDF.js -->
+
+    <script
+        type="module"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.min.mjs">
+    </script>
+
+
+    <!-- Mammoth.js -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.12.2/mammoth.browser.min.js">
+    </script>
+
+
+    <!-- Your JavaScript -->
+
+    <script
+        type="module"
+        src="resume.js">
+    </script>
+
+</body>
+
+</html>

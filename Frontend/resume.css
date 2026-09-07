@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0 60px;
+}
+
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.header h1 {
+    font-size: 34px;
+    margin: 15px 0 10px;
+}
+
+
+.header p {
+    color: #777;
+}
+
+
+.back-btn {
+    text-decoration: none;
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+
+/* ANALYZER */
+
+.analyzer-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.section {
+    margin-bottom: 30px;
+}
+
+
+.section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+
+/* UPLOAD */
+
+.upload-box {
+    border: 2px dashed #d5d5e5;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #fafaff;
+}
+
+
+.upload-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+.upload-box h3 {
+    margin-bottom: 8px;
+}
+
+
+.upload-box p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+
+#resumeFile {
+    display: none;
+}
+
+
+.upload-button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+#fileName {
+    margin-top: 15px;
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+
+/* INPUT */
+
+input[type="text"] {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input[type="text"]:focus {
+
+    border-color: #6c63ff;
+}
+
+
+/* TEXTAREA */
+
+textarea {
+
+    width: 100%;
+
+    height: 200px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    resize: vertical;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+
+textarea:focus {
+
+    border-color: #6c63ff;
+}
+
+
+/* BUTTON */
+
+.analyze-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.analyze-button:hover {
+
+    background: #574fd6;
+}
+
+
+.analyze-button span {
+
+    margin-left: 8px;
+}
+
+
+/* LOADING */
+
+.loading {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #666;
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 4px solid #ddd;
+
+    border-top: 4px solid #6c63ff;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* RESULTS */
+
+.result-section {
+
+    display: none;
+
+    margin-top: 30px;
+}
+
+
+.result-section > h2 {
+
+    margin-bottom: 20px;
+}
+
+
+/* SCORE */
+
+.score-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 25px;
+}
+
+
+.score-circle {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: #6c63ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+.score-text h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+.score-text p {
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* RESULT GRID */
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.result-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.result-card h3 {
+
+    margin-bottom: 20px;
+}
+
+
+/* SKILLS */
+
+.skills-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.skill {
+
+    padding: 8px 13px;
+
+    background: #eeeaff;
+
+    color: #574fd6;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.missing-skill {
+
+    background: #ffe9e9;
+
+    color: #d33;
+}
+
+
+/* INFO */
+
+.info-card {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.info-card h3 {
+
+    margin-bottom: 20px;
+}
+
+
+.keyword-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+
+.keyword-info div {
+
+    padding: 20px;
+
+    background: #f7f7ff;
+
+    border-radius: 12px;
+}
+
+
+.keyword-info strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    color: #6c63ff;
+
+    margin-bottom: 8px;
+}
+
+
+.keyword-info span {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* IMPROVEMENTS */
+
+.improvement-card {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.improvement-card h3 {
+
+    margin-bottom: 15px;
+}
+
+
+.improvement-card li {
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    line-height: 1.5;
+}
+
+
+/* RESUME TEXT */
+
+.resume-text-box {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+
+.resume-text-box summary {
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #6c63ff;
+}
+
+
+#resumeText {
+
+    margin-top: 20px;
+
+    white-space: pre-wrap;
+
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) {
+
+    .container {
+
+        width: 94%;
+    }
+
+
+    .analyzer-box {
+
+        padding: 20px;
+    }
+
+
+    .header h1 {
+
+        font-size: 27px;
+    }
+
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .score-card {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .keyword-info {
+
+        grid-template-columns: 1fr;
+    }
+
+}
