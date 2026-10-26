@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080b18;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 38px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.interview-box {
+    background: #11152a;
+    border: 1px solid #394cff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(50, 70, 255, 0.2);
+}
+
+.interview-box h2 {
+    text-align: center;
+    color: #8b8cff;
+}
+
+.question-box,
+.answer-box {
+    background: #181d35;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.question-box h3 {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #5965ff;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #747cff;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.next-btn {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+#status {
+    color: #aaa;
+}
+
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #202642;
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .interview-box {
+        padding: 18px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+.ai-interviewer {
+  text-align: center;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f0f4ff;
+}
+
+.avatar-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #6258e8;
+}
+
+.ai-interviewer button {
+  background: #6258e8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body {
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Modern InterviewAI Buttons */
+button,
+.next-btn,
+.buttons button {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(59, 130, 246, 0.25);
+    transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+button:hover,
+.next-btn:hover,
+.buttons button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45);
+}
+
+/* Click Effect */
+button:active,
+.next-btn:active,
+.buttons button:active {
+    transform: scale(0.97);
+}
+
+/* Answer Box */
+#answer {
+    border: 1px solid #647cff;
+    border-radius: 14px;
+    padding: 16px;
+    background: #f8faff;
+    color: #172033;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.25s ease;
+}
+
+#answer:focus {
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* Interview Card */
+.interview-box {
+    border-radius: 20px;
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 10px 35px rgba(37, 99, 235, 0.15);
+}
+/* Female Avatar Section */
+.ai-interviewer {
+    background: rgba(15, 23, 42, 0.92) !important;
+    color: #ffffff !important;
+    border: 1px solid #3b82f6;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+/* Avatar Name */
+.ai-interviewer p {
+    color: #dbeafe !important;
+    font-weight: 600;
+}
+
+/* Answer Box */
+#answer {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #3b82f6 !important;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+/* Placeholder Text */
+#answer::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus Effect */
+#answer:focus {
+    outline: none;
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.3);
+}

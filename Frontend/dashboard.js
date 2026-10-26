@@ -473,3 +473,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// Start Interview button
+document.getElementById("startInterview").addEventListener("click", function () {
+    window.location.href = "interview.html";
+});
+
+
+// Practice Now buttons
+document.querySelectorAll(".interview-card button").forEach(function(button) {
+    button.addEventListener("click", function() {
+        window.location.href = "interview.html";
+    });
+});
+
+
+// New Interview
+document.getElementById("newInterview").addEventListener("click", function() {
+    window.location.href = "interview.html";
+});

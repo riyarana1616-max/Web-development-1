@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewAI - Interview</title>
+
+    <link rel="stylesheet" href="interview.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 InterviewAI</h1>
+        <p class="subtitle">Ace Every Interview with AI</p>
+
+        <div class="interview-box">
+
+            <h2>AI Interview 🎤</h2>
+
+            <div class="question-box">
+                <p>Question:</p>
+
+                <h3 id="question">
+                    Tell me about yourself.
+                </h3>
+
+                <button onclick="speakQuestion()">
+                    🔊 Hear Question
+                </button>
+                <div class="ai-interviewer">
+  <img src="female-avatar.png"
+       alt="AI Interviewer"
+       class="avatar-img">
+
+  <h3>AI Interviewer</h3>
+
+  <button id="speakBtn">
+    🔊 Speak Question
+  </button>
+</div>
+            </div>
+
+            <div class="answer-box">
+
+                <h3>Your Answer</h3>
+
+                <textarea id="answer"
+                    placeholder="Click the microphone and speak your answer...">
+                </textarea>
+
+                <div class="buttons">
+
+                    <button id="micBtn" onclick="startListening()">
+                        🎤 Speak Answer
+                    </button>
+
+                    <button onclick="stopListening()">
+                        ⏹ Stop
+                    </button>
+
+                </div>
+
+                <p id="status">Click "Speak Answer" to start.</p>
+
+            </div>
+
+            <button class="next-btn" onclick="nextQuestion()">
+                Next Question ➜
+            </button>
+
+            <div id="feedback"></div>
+
+        </div>
+
+    </div>
+
+    <script src="interview.js"></script>
+
+</body>
+</html>
+    

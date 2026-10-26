@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewAI Dashboard</title>
+
+    <link rel="stylesheet" href="dasboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         SIDEBAR
+    =============================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            🤖
+
+            <span>InterviewAI</span>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+
+            <a href="#" class="menu-item active">
+
+                <span>▣</span>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="#" class="menu-item" id="newInterview">
+
+                <span>⊕</span>
+
+                New Interview
+
+            </a>
+
+
+            <a href="#" class="menu-item" id="history">
+
+                <span>◷</span>
+
+                History
+
+            </a>
+
+
+            <a href="#" class="menu-item" id="bookmarks">
+
+                <span>♡</span>
+
+                Bookmarks
+
+            </a>
+
+
+
+            <a href="resume.html" class="menu-item">
+                <span>📄</span>
+                Resume
+            </a>
+
+
+
+            <a href="#" class="menu-item" id="performance">
+
+                <span>▥</span>
+
+                Performance
+
+            </a>
+
+
+            <a href="#" class="menu-item" id="profile">
+
+                <span>♙</span>
+
+                Profile
+
+            </a>
+
+
+            <a href="#" class="menu-item" id="settings">
+
+                <span>⚙</span>
+
+                Settings
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- UPGRADE BOX -->
+
+        <div class="upgrade-box">
+
+            <div class="rocket">
+                🚀
+            </div>
+
+            <h3>
+                Upgrade to Pro
+            </h3>
+
+            <p>
+                Unlock unlimited interviews,
+                detailed AI feedback and
+                performance insights.
+            </p>
+
+            <button id="upgradeButton">
+                Upgrade Now
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- ==============================
+         MAIN AREA
+    =============================== -->
+
+    <main class="main">
+
+
+        <!-- ==============================
+             TOP BAR
+        =============================== -->
+
+        <header class="topbar">
+
+
+            <div class="search">
+
+                🔍
+
+                <input type="text" placeholder="Search anything..." id="searchInput">
+
+            </div>
+
+
+            <div class="top-right">
+
+
+                <button class="notification" id="notificationButton">
+                    🔔
+
+                    <span>3</span>
+
+                </button>
+
+
+                <div class="user" id="userProfile">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <span>
+                        Swati Upadhyay
+                    </span>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </header>
+
+
+        <!-- ==============================
+             CONTENT
+        =============================== -->
+
+        <section class="content">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome">
+
+                <h1>
+                    Welcome back, Swati 👋
+                </h1>
+
+                <p>
+                    Ready to ace your next interview?
+                </p>
+
+            </div>
+
+
+            <!-- ==============================
+                 START INTERVIEW
+            =============================== -->
+
+            <div class="start-card">
+
+
+                <div class="start-text">
+
+                    <h2>
+                        Start New Interview
+                    </h2>
+
+                    <p>
+                        Practice with AI. Get real-time
+                        feedback and improve your skills.
+                    </p>
+
+
+                    <button id="startInterview" class="primary-button">
+
+                        Start Interview
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="robot-area">
+
+                    🤖
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+     RESUME ANALYZER
+========================= -->
+
+            <div class="resume-card">
+
+                <div class="resume-icon">
+                    📄
+                </div>
+
+                <div class="resume-content">
+
+                    <h2>Resume Analyzer</h2>
+
+                    <p>
+                        Upload your resume and check your ATS score,
+                        matching skills, missing skills and improvements.
+                    </p>
+
+                    <a href="resume.html" class="resume-button">
+                        Analyze Resume
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- ==============================
+                 STAT CARDS
+            =============================== -->
+
+            <div class="stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        🎙️
+                    </div>
+
+                    <div>
+
+                        <h2>12</h2>
+
+                        <p>Total Interviews</p>
+
+                        <small>
+                            ↑ 20% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <h2>82%</h2>
+
+                        <p>Average Score</p>
+
+                        <small>
+                            ↑ 8% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ☑
+                    </div>
+
+                    <div>
+
+                        <h2>8</h2>
+
+                        <p>Completed</p>
+
+                        <small class="normal">
+                            This month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🏆
+                    </div>
+
+                    <div>
+
+                        <h2>92%</h2>
+
+                        <p>Best Score</p>
+
+                        <small class="normal">
+                            In Java interview
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ==============================
+                 INTERVIEW CATEGORIES
+            =============================== -->
+
+            <div class="section-title">
+
+                <h2>
+                    Choose Your Interview
+                </h2>
+
+                <a href="#" id="viewAll">
+                    View all
+                </a>
+
+            </div>
+
+
+            <div class="interviews">
+
+
+                <!-- FRONTEND -->
+
+                <div class="interview-card" data-interview="Frontend Developer">
+
+                    <div class="category-icon pink">
+                        🖥️
+                    </div>
+
+                    <h3>
+                        Frontend<br>
+                        Developer
+                    </h3>
+
+                    <p>
+                        10+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+                <!-- JAVA -->
+
+                <div class="interview-card" data-interview="Java Developer">
+
+                    <div class="category-icon orange">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Java<br>
+                        Developer
+                    </h3>
+
+                    <p>
+                        12+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+                <!-- PYTHON -->
+
+                <div class="interview-card" data-interview="Python Developer">
+
+                    <div class="category-icon blue">
+                        🐍
+                    </div>
+
+                    <h3>
+                        Python<br>
+                        Developer
+                    </h3>
+
+                    <p>
+                        10+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+                <!-- SQL -->
+
+                <div class="interview-card" data-interview="SQL Interview">
+
+                    <div class="category-icon cyan">
+                        🗄️
+                    </div>
+
+                    <h3>
+                        SQL<br>
+                        Interview
+                    </h3>
+
+                    <p>
+                        8+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+                <!-- DATA ANALYST -->
+
+                <div class="interview-card" data-interview="Data Analyst Interview">
+
+                    <div class="category-icon purple">
+                        📊
+                    </div>
+
+                    <h3>
+                        Data Analyst<br>
+                        Interview
+                    </h3>
+
+                    <p>
+                        10+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+                <!-- AI ML -->
+
+                <div class="interview-card" data-interview="AI ML Interview">
+
+                    <div class="category-icon green">
+                        🧠
+                    </div>
+
+                    <h3>
+                        AI/ML<br>
+                        Interview
+                    </h3>
+
+                    <p>
+                        15+ Questions
+                    </p>
+
+                    <button>
+                        Practice Now
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ==============================
+                 BOTTOM GRID
+            =============================== -->
+
+            <div class="bottom-grid">
+
+
+                <!-- RECENT INTERVIEWS -->
+
+                <div class="recent">
+
+
+                    <div class="section-title">
+
+                        <h2>
+                            Recent Interviews
+                        </h2>
+
+                    </div>
+
+
+                    <div class="table">
+
+
+                        <div class="table-header">
+
+                            <span>Interview</span>
+
+                            <span>Questions</span>
+
+                            <span>Score</span>
+
+                            <span>Date</span>
+
+                            <span>Action</span>
+
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span>
+                                🖥️ Frontend Developer
+                            </span>
+
+                            <span>10</span>
+
+                            <span class="score">
+                                82%
+                            </span>
+
+                            <span>
+                                18 May, 2024
+                            </span>
+
+                            <a href="#">
+                                View Result
+                            </a>
+
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span>
+                                ☕ Java Developer
+                            </span>
+
+                            <span>12</span>
+
+                            <span class="score">
+                                76%
+                            </span>
+
+                            <span>
+                                15 May, 2024
+                            </span>
+
+                            <a href="#">
+                                View Result
+                            </a>
+
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span>
+                                🗄️ SQL Interview
+                            </span>
+
+                            <span>8</span>
+
+                            <span class="score">
+                                88%
+                            </span>
+
+                            <span>
+                                12 May, 2024
+                            </span>
+
+                            <a href="#">
+                                View Result
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="right-column">
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="progress-card">
+
+                        <h2>
+                            Your Progress
+                        </h2>
+
+
+                        <div class="circle">
+
+                            <div>
+
+                                <strong>
+                                    82%
+                                </strong>
+
+                                <span>
+                                    Overall Progress
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <p>
+                            Keep practicing to reach 100%! 🚀
+                        </p>
+
+                    </div>
+
+
+                    <!-- PERFORMANCE -->
+
+                    <div class="performance-card">
+
+                        <div class="performance-title">
+
+                            <h2>
+                                Performance Overview
+                            </h2>
+
+                            <select>
+
+                                <option>
+                                    This Month
+                                </option>
+
+                                <option>
+                                    Last Month
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="chart">
+
+                            <div class="chart-line line1"></div>
+
+                            <div class="chart-line line2"></div>
+
+                            <div class="chart-line line3"></div>
+
+                            <div class="chart-line line4"></div>
+
+
+                            <div class="points">
+
+                                <span style="--h:20%"></span>
+                                <span style="--h:35%"></span>
+                                <span style="--h:45%"></span>
+                                <span style="--h:58%"></span>
+                                <span style="--h:48%"></span>
+                                <span style="--h:52%"></span>
+                                <span style="--h:70%"></span>
+                                <span style="--h:72%"></span>
+                                <span style="--h:82%"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="months">
+
+                            <span>1 May</span>
+                            <span>8 May</span>
+                            <span>15 May</span>
+                            <span>22 May</span>
+                            <span>29 May</span>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- QUICK TIPS -->
+
+                    <div class="tips">
+
+                        <h2>
+                            💡 Quick Tips
+                        </h2>
+
+
+                        <p>
+                            → Practice daily to improve
+                            your confidence.
+                        </p>
+
+
+                        <p>
+                            → Review your mistakes and
+                            learn from AI feedback.
+                        </p>
+
+
+                        <p>
+                            → Try different interview
+                            categories.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+    <!-- Floating Chat Icon -->
+    <div id="chatbot-icon">💬</div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="hidden">
+        <div id="chatbot-header">
+            <span>Chatbot</span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+        </div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
